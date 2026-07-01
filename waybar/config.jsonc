@@ -1,0 +1,96 @@
+{
+    "layer": "float", // Waybar at top layer
+    "position": "top", // Waybar at the bottom of your screen
+    "height": 35, // Waybar height
+    "spacing": 5,
+    "margin": 0,
+    "width": 2560, // Waybar width
+    "reload_style_on_change": true,
+    // Choose the order of the modules
+    "modules-left": [ "clock#time", "custom/separator", "pulseaudio","custom/separator", "network", "custom/separator",  "custom/launcher"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": [ "cpu", "custom/separator", "temperature", "custom/separator", "memory", "custom/separator", "clock#date"],
+    // Modules configuration
+    "hyprland/workspaces": {
+         "disable-scroll": false,
+         "all-outputs": true,
+         "format": "{icon}",
+         "format-icons": {
+             "1": "I",
+             "2": "II",
+             "3": "III",
+             "4": "IV",
+             "5": "V",
+             "6": "VI",
+             "7": "VII",
+             "8": "VIII",
+             "9": "IX",
+             "10": "X"
+
+
+         }
+
+
+
+
+    },
+    "hyrpland/window": {
+        "max-length": 20
+    },
+    "cpu": {
+        "format": "{}% ",
+    },
+    "memory": {
+        "format": "{}% 󰍜"
+
+    },
+    "temperature": {
+         "format": "{}°C "
+
+   },
+   "custom/separator": {
+    "format": "|",
+    "tooltip": false
+
+
+
+
+
+
+    },
+    "network": {
+        // "interface": "wlp2s0", // (Optional) To force the use of this interface
+        "format-wifi": " ({signalStrength}%) ",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "Disconnected ⚠"
+    },
+    "pulseaudio": {
+        "format": "{volume} {icon}",
+        "format-muted": "",
+        "format-icons": ["", ""],
+        "on-click": ""
+
+
+    }, "clock#date": {
+
+              "format": " {:%d/%m/%Y %a }",
+              "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+               // "format-alt": "{:%Y-%m-%d}"
+    },
+              "clock#time": {
+              "interval": 1,
+              "format": "{:%H:%M}",
+            "tooltip": false
+},
+
+             "custom/launcher":{
+             "format": "  OB ",
+            "tooltip": false,
+            "on-click": "hyprlauncher",
+            "on-click-right": "killall hyprlauncher"
+},
+
+    }
+}
+
+
