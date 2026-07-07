@@ -24,7 +24,7 @@ extras:
 
 
 
-For the terminal I am using the pre-configured kitten them "Graphite"
+For the terminal I am using the pre-configured kitten theme "graphite"
 
 
 
