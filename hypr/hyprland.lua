@@ -1,4 +1,13 @@
+-- This is an example Hyprland Lua config file.
+-- Refer to the wiki for more information.
+-- https://wiki.hypr.land/Configuring/Start/
 
+-- Please note not all available settings / options are set here.
+-- For a full list, see the wiki
+
+-- You can (and should!!) split this configuration into multiple files
+-- Create your files separately and then require them like this:
+-- require("myColors")
 
 
 
@@ -27,7 +36,9 @@ local fileManager = "dolphin"
 local menu        = "hyprlauncher"
 local browser     = "helium-browser"
 local launcher    = "hyprlauncher"
-
+local text editor = "kate"
+local auth agent  = "hyprpolkitagent"
+local notification daemon = "swaync"
 
 
 
@@ -53,6 +64,7 @@ hl.exec_cmd("nm-applet")
 hl.exec_cmd("waybar & hyprpaper")
 hl.exec_cmd("systemctl --user start hyprpolkitagent")
 hl.exec_cmd("swaync")
+hl.exec_cmd("openrgb")
 end)
 
 
@@ -151,7 +163,7 @@ hl.curve("almostLinear",   { type = "bezier", points = { {0.5, 0.5},   {0.75, 1}
 hl.curve("quick",          { type = "bezier", points = { {0.15, 0},    {0.1, 1}     } })
 
 -- Default springs
-hl.curve("easy",           { type = "spring", mass = 1, stiffness = 20.2633, dampening = 20.8273644 })
+hl.curve("easy",           { type = "spring", mass = 1, stiffness = 60.2633, dampening = 20.8273644 })
 
 hl.animation({ leaf = "global",        enabled = true,  speed = 10,   bezier = "default" })
 hl.animation({ leaf = "border",        enabled = true,  speed = 5.39, bezier = "easeOutQuint" })
@@ -162,13 +174,13 @@ hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 1.73, bezier = "
 hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 1.46, bezier = "almostLinear" })
 hl.animation({ leaf = "fade",          enabled = true,  speed = 3.03, bezier = "quick" })
 hl.animation({ leaf = "layers",        enabled = true,  speed = 3.81, bezier = "easeOutQuint" })
-hl.animation({ leaf = "layersIn",      enabled = true,  speed = 4,    bezier = "easeOutQuint", style = "fade" })
-hl.animation({ leaf = "layersOut",     enabled = true,  speed = 1.5,  bezier = "linear",       style = "fade" })
+hl.animation({ leaf = "layersIn",      enabled = true,  speed = 4,    bezier = "easeOutQuint", style = "fade & smoothIn & smoothOut" })
+hl.animation({ leaf = "layersOut",     enabled = true,  speed = 1.5,  bezier = "linear",       style = "fade & smoothIn & smoothOut" })
 hl.animation({ leaf = "fadeLayersIn",  enabled = true,  speed = 1.79, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeLayersOut", enabled = true,  speed = 1.39, bezier = "almostLinear" })
-hl.animation({ leaf = "workspaces",    enabled = true,  speed = 2.8, bezier = "almostLinear", style = "slide" })
-hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 2.8, bezier = "almostLinear", style = "slide" })
-hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 2.8, bezier = "almostLinear", style = "slide" })
+hl.animation({ leaf = "workspaces",    enabled = true,  speed = 2.7, bezier = "almostLinear", style = "slide & smoothIn & smoothOut" })
+hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 2.7, bezier = "almostLinear", style = "slide & smoothIn & smoothOut" })
+hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 2.7, bezier = "almostLinear", style = "slide & smoothIn & smoothOut" })
 hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "quick" })
 
 
@@ -221,6 +233,8 @@ hl.config({
             disable_hyprland_logo   = true, -- If true disables the random hyprland logo / anime girl background. :)
                 disable_splash_rendering = true,
                 middle_click_paste       = false
+
+
 
     },
 })
