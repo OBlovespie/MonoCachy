@@ -1,6 +1,7 @@
 # MonoCachy         
 
-<img width="25758" height="224" alt="monocachy" src="https://github.com/user-attachments/assets/39beaa09-f7d6-449e-9f68-b8131becd1ca" />
+<img width="577" height="155" alt="ascii-tex2t" src="https://github.com/user-attachments/assets/146c39c3-2ce2-4c03-b8d5-813ed0d26cd3" />
+
 
                                                      
    
