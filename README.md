@@ -20,7 +20,10 @@ Below are examples of the config, as of now there is still parts that have incon
 <img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/d3d4aebc-77f9-4dca-81a1-a5739c96287b" />
 
 
-extras
+extras:
+
+
+
 For the terminal I am using the pre-configured kitten them "Graphite"
 
 
