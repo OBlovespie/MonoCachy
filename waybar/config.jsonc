@@ -1,15 +1,19 @@
 {
     "layer": "float", // Waybar at top layer
     "position": "top", // Waybar at the bottom of your screen
-    "height": 35, // Waybar height
     "spacing": 5,
-    "margin": 0,
-    "width": 2560, // Waybar width
+    "margin": 5,
+    "width": 2540,
+    "height": 40,
+    "mod": "dock",
+    "margin-top": 10,
+    "margin-left": 20,
+    "margin-right": 20,
     "reload_style_on_change": true,
     // Choose the order of the modules
-    "modules-left": [ "clock#time", "custom/separator", "pulseaudio","custom/separator", "network", "custom/separator",  "custom/launcher"],
+    "modules-left": [ "clock#time", "custom/separator", "pulseaudio", "custom/separator", "network", "custom/separator", "custom/power"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": [ "cpu", "custom/separator", "temperature", "custom/separator", "memory", "custom/separator", "clock#date"],
+    "modules-right": [ "custom/swaync", "custom/separator", "cpu", "custom/separator", "temperature", "custom/separator", "memory", "custom/separator", "clock#date"],
     // Modules configuration
     "hyprland/workspaces": {
          "disable-scroll": false,
@@ -52,11 +56,6 @@
     "format": "|",
     "tooltip": false
 
-
-
-
-
-
     },
     "network": {
         // "interface": "wlp2s0", // (Optional) To force the use of this interface
@@ -73,7 +72,7 @@
 
     }, "clock#date": {
 
-              "format": " {:%d/%m/%Y %a }",
+              "format": " {:%d/%m/%Y %a }",
               "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
                // "format-alt": "{:%Y-%m-%d}"
     },
@@ -83,11 +82,21 @@
             "tooltip": false
 },
 
-             "custom/launcher":{
-             "format": "  OB ",
+             "custom/power":{
+             "format": "  ⏻ ",
             "tooltip": false,
-            "on-click": "hyprlauncher",
-            "on-click-right": "killall hyprlauncher"
+            "on-click-right": "hyprlauncher",
+            "on-click": "wlogout",
+
+},
+
+
+    "custom/swaync": {
+    "tooltip": false,
+    "on-click": "swaync-client -t -sw",
+    "format": "    ",
+
+
 },
 
     }
