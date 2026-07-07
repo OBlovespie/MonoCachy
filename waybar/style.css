@@ -13,6 +13,9 @@ window#waybar {
     transition-property: background-color;
     transition-duration: .5s;
     border-bottom: 2px solid rgba(255, 255, 255, 1);
+    border-top: 2px solid rgba(255, 255, 255, 1);
+    border-left: 2px solid rgba(255, 255, 255, 1);
+    border-right: 2px solid rgba(255, 255, 255, 1);
     color: white;
     margin-left: 5px;
     margin-right: 5px;
@@ -22,9 +25,9 @@ window#waybar {
 .modules-left {
     margin-left: -5px;
     border-radius: 0px;
-    margin: 0px 0px 3px 0px;
+    margin: 0px 0px 0px 0px;
     background-color: transparent;
-    box-shadow: 0px 0px 2px #101010;
+    box-shadow: 0px 0px 0px #101010;
     transition-property: background-color;
     transition-duration: .5s;
     padding-left: 4px;
@@ -34,9 +37,9 @@ window#waybar {
 .modules-right {
     margin-left: -5px;
     border-radius: 0px;
-    margin: 0px 0px 3px 0px;
+    margin: 0px 0px 0px 0px;
     background-color: transparent;
-    box-shadow: 0px 0px 2px #101010;
+    box-shadow: 0px 0px 0px #101010;
     transition-property: background-color;
     transition-duration: .5s;
     padding-right: 4px;
@@ -91,7 +94,7 @@ padding: 1px 4px;
 
 
 
-#clock, #cpu, #memory, #network, #pulseaudio, #temperature #workspaces {
+#clock, #cpu, #memory, #network, #pulseaudio, #temperature, #workspaces #custompower #customswaync {
 padding: 0px 10px;
 margin: 8px 10px;
 }
@@ -106,8 +109,16 @@ padding: 0px 10px;
 margin: 8px 10px;
 }
 
+#custompower {
+padding: 0px 10px;
+margin: 8px 10px;
+}
 
 
+#customswaync {
+padding: 0px 10px;
+margin: 8px 10px;
+}
 
 
 
@@ -122,6 +133,8 @@ margin: 8px 10px;
 background: transparent;
 color: white;
 }
+
+
 
 #cpu {
 background: transparent;
