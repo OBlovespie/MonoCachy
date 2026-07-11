@@ -4,9 +4,7 @@
 
 MonoCachy is a Cachyos/hyprland rice that uses a monochrome/greyscale colour scheme.
                                                      
-   
-
-
+  
 
 Below are examples of the config, as of now there is still parts that are inconsistent. Such as the rounded corners in certain places like in the notification menu and other popups, The distances of popups from edges of screen and more. Which are out of place. The Wlogout screen needs more configuring and is quite bare right now. Will fix soon.
 
@@ -27,7 +25,7 @@ Below are examples of the config, as of now there is still parts that are incons
 
 
 
-
+The purpose of these repo is really just to get all my stuff back next time I break my system but feel free to use it, not the most advanced config or anything but its nice.
 
 
 
