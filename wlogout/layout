@@ -1,10 +1,3 @@
-
-{
-    "label" : "reboot",
-    "action" : "systemctl reboot",
-    "text" : "Reboot",
-    "keybind" : "r"
-}
 {
     "label" : "shutdown",
     "action" : "systemctl poweroff",
@@ -12,9 +5,20 @@
     "keybind" : "s"
 }
 {
+
+    "label" : "reboot",
+    "action" : "systemctl reboot",
+    "text" : "Reboot",
+}   "keybind" : "r"
+{
     "label" : "logout",
     "action" : "loginctl kill-session $XDG_SESSION_ID",
     "text" : "Logout",
     "keybind" : "e"
 }
-
+{
+    "label" : "sleep",
+    "action" : "systemctl suspend",
+    "text" : "Sleep",
+    "keybind" : "w"
+}
