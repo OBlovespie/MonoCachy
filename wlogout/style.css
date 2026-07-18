@@ -2,31 +2,71 @@ window {
     font-family: MesloLGLDZ Nerd Font Propo;
     font-size: 16pt;
     color: #cdd6f4; /* text */
-    background-color: rgba(0, 00, 00, 0.9);
+    background-color: rgba(0, 00, 00, 0.6);
 }
 
 button {
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 20%;
-    background-color: rgba(18, 18, 17, 0.88);
+    background-size: 40%;
+    background-color: rgba(00, 00, 00, 0.88);
     border-radius: 0px;
+    border-color: white;
+    border-style: solid;
     margin: 10px;
+    color: #FFFFFF;
+    border: none;
     animation: gradient_f 10s ease-in infinite;
     transition:
     all 0.3s cubic-bezier(0.9, 0, 0.28, 1.682),
-    box-shadow 0.2s ease-in-out,
-    background-color 0.2s ease-in-out;
+    box-shadow 0.2s ease-in-out;
 }
 
 
 
 
 button:hover {
-    background-color: rgba(8, 8, 7, 0.07);
-    color: #262625;
-    background-size: 70%;
-    margin: 5px;
+    background-color: rgba(00, 00, 00, 0.07);
+    color: #ffffff;
+    background-size: 50%;
+    margin: 10px;
+    background-position: center;
     border-radius: 0px;
 }
+
+button:focus {
+	outline-style: solid;
+	border-radius: 0px;
+        margin: 10px 10px;
+	border-color: #FFFFFF;
+}
+
+
+button:disabled {
+    opacity: 0;
+    border: none;
+    background: transparent;
+}
+
+
+#logout {
+    background-image: image(url("/home/fm1/.config/wlogout/icons/logout-hover.png"));
+}
+
+#sleep {
+    background-image: image(url("/home/fm1/.config/wlogout/icons/sleep-hover.png"));
+
+}
+
+#shutdown {
+    background-image: image(url("/home/fm1/.config/wlogout/icons/power-hover.png"));
+
+}
+
+#reboot {
+    background-image: image(url("/home/fm1/.config/wlogout/icons/restart-hover.png"));
+}
+
+
+
 
