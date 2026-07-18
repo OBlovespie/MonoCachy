@@ -86,7 +86,7 @@
              "format": "  ⏻ ",
             "tooltip": false,
             "on-click-right": "hyprlauncher",
-            "on-click": "wlogout",
+            "on-click": "wlogout --buttons-per-row 2",
 
 },
 
