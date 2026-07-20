@@ -219,8 +219,8 @@ hl.config({
     misc = {
         force_default_wallpaper = 1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
             disable_hyprland_logo   = true, -- If true disables the random hyprland logo / anime girl background. :)
-                disable_splash_rendering = true,
-                middle_click_paste       = false
+disable_splash_rendering = true,
+middle_click_paste       = false
 
 
 
@@ -316,8 +316,8 @@ for i = 1, 10 do
     end
 
     -- Example special workspace (scratchpad)
-    hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
-    hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+    hl.bind(mainMod .. " + P",         hl.dsp.workspace.toggle_special("magic"))
+    hl.bind(mainMod .. " + SHIFT + P", hl.dsp.window.move({ workspace = "special:magic" }))
 
     -- Scroll through existing workspaces with mainMod + scroll
     hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
