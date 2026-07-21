@@ -3,19 +3,22 @@ window {
     font-size: 16pt;
     color: #cdd6f4; /* text */
     background-color: rgba(0, 00, 00, 0.6);
+    border: 15px;
+    border-color: rgba(255,255,255,1);
 }
 
 button {
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 40%;
+    background-size: 20%;
     background-color: rgba(00, 00, 00, 0.88);
     border-radius: 0px;
     border-color: white;
     border-style: solid;
     margin: 10px;
     color: #FFFFFF;
-    border: none;
+    border: 15px;
+    border-color: rgba(255,255,255,1);
     animation: gradient_f 10s ease-in infinite;
     transition:
     all 0.3s cubic-bezier(0.9, 0, 0.28, 1.682),
@@ -28,7 +31,7 @@ button {
 button:hover {
     background-color: rgba(00, 00, 00, 0.07);
     color: #ffffff;
-    background-size: 50%;
+    background-size: 30%;
     margin: 10px;
     background-position: center;
     border-radius: 0px;
@@ -39,6 +42,8 @@ button:focus {
 	border-radius: 0px;
         margin: 10px 10px;
 	border-color: #FFFFFF;
+	border: 15px;
+        border-color: rgba(255,255,255,1);
 }
 
 
@@ -66,6 +71,8 @@ button:disabled {
 #reboot {
     background-image: image(url("/home/fm1/.config/wlogout/icons/restart-hover.png"));
 }
+
+
 
 
 
