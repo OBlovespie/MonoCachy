@@ -1,20 +1,20 @@
 {
-    "layer": "float", // Waybar at top layer
+   "exclusive": "true",
+   "layer": "float", // Waybar at top layer
     "position": "top", // Waybar at the bottom of your screen
     "spacing": 5,
     "margin": 5,
     "width": 2540,
-    "height": 40,
+    "height": 50,
     "mod": "dock",
     "margin-top": 10,
     "margin-left": 20,
     "margin-right": 20,
     "reload_style_on_change": true,
-    // Choose the order of the modules
     "modules-left": [ "clock#time", "custom/separator", "pulseaudio", "custom/separator", "network", "custom/separator", "custom/power"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": [ "custom/swaync", "custom/separator", "cpu", "custom/separator", "temperature", "custom/separator", "memory", "custom/separator", "clock#date"],
-    // Modules configuration
+
     "hyprland/workspaces": {
          "disable-scroll": false,
          "all-outputs": true,
@@ -32,6 +32,8 @@
              "10": "X"
 
 
+
+
          }
 
 
@@ -42,14 +44,14 @@
         "max-length": 20
     },
     "cpu": {
-        "format": "{}% ",
+        "format": "{}% "
     },
     "memory": {
         "format": "{}% 󰍜"
 
     },
     "temperature": {
-         "format": "{}°C "
+             "format": "{}°C"
 
    },
    "custom/separator": {
@@ -59,9 +61,9 @@
     },
     "network": {
         // "interface": "wlp2s0", // (Optional) To force the use of this interface
-        "format-wifi": " ({signalStrength}%) ",
+        "format-wifi": "  ",
         "format-ethernet": "󰈀",
-        "format-disconnected": "Disconnected ⚠"
+        "format-disconnected": "!!!"
     },
     "pulseaudio": {
         "format": "{volume} {icon}",
@@ -72,7 +74,7 @@
 
     }, "clock#date": {
 
-              "format": " {:%d/%m/%Y %a }",
+              "format": "{:%d/%m/%Y %a }",
               "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
                // "format-alt": "{:%Y-%m-%d}"
     },
@@ -83,10 +85,10 @@
 },
 
              "custom/power":{
-             "format": "  ⏻ ",
+             "format": "  ⏻  ",
             "tooltip": false,
             "on-click-right": "hyprlauncher",
-            "on-click": "wlogout --buttons-per-row 2",
+            "on-click": "wlogout --buttons-per-row 2"
 
 },
 
@@ -94,10 +96,10 @@
     "custom/swaync": {
     "tooltip": false,
     "on-click": "swaync-client -t -sw",
-    "format": "    ",
+    "format": "    "
 
 
-},
+}
 
     }
 }
