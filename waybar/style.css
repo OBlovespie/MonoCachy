@@ -14,8 +14,8 @@ window#waybar {
     transition-duration: .5s;
     border-bottom: 2px solid rgba(255, 255, 255, 1);
     border-top: 2px solid rgba(255, 255, 255, 1);
-    border-left: 2px solid rgba(255, 255, 255, 1);
-    border-right: 2px solid rgba(255, 255, 255, 1);
+    border-left: 2px solid rgba(255,255,255,1);
+    border-right: 2px solid rgba(255, 255, 255,1);
     color: white;
     margin-left: 5px;
     margin-right: 5px;
@@ -47,14 +47,14 @@ window#waybar {
 }
 
 #workspaces {
-margin: 0px 0px;
+margin: 5px 5px;
 transition: 0.2s ease;
-padding: 1px 2px;
+padding: 4px 4px;
 }
 
 
 #workspaces button {
-padding: 4px 10px;
+padding: 4px 4px;
 margin: 0px;
 color: @foreground;
 border: none;
@@ -65,18 +65,15 @@ border-radius: 0;
 }
 
 #workspaces button.active {
-color: @foreground;
+color: rgba(255,255,255,1);
 transition: all 0.3s ease;
-padding: 4px 10px;
-opacity: 1.0;
+border-bottom: 1px solid alpha(@foreground, 1);
+padding: 4px 4px;
+margin: 5px;
+animation: ws_hover 20s ease-in-out 1;
+opacity: 0.9;
 }
 
-#workspaces button:hover {
-background: transparent;
-color: alpha(@foreground, 0.4);
-animation: ws_hover 20s ease-in-out 1;
-transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
-}
 
 #workspaces button.empty {
 opacity: 0.15;
@@ -94,9 +91,11 @@ padding: 1px 4px;
 
 
 
-#clock, #cpu, #memory, #network, #pulseaudio, #temperature, #workspaces #custompower #customswaync {
-padding: 0px 10px;
-margin: 8px 10px;
+#clock, #cpu, #memory, #network, #pulseaudio, #temperature, #workspaces, #custompower, #customseparator, #customswaync {
+padding: 0px 5px;
+margin: 5px 10px;
+padding-left: 5px;
+padding-right: 5px;
 }
 
 #clock {
@@ -104,10 +103,7 @@ background-color: transparent;
 color: white
 }
 
-#temperature {
-padding: 0px 10px;
-margin: 8px 10px;
-}
+
 
 #custompower {
 padding: 0px 10px;
@@ -115,7 +111,7 @@ margin: 8px 10px;
 }
 
 
-#customswaync {
+customswaync {
 padding: 0px 10px;
 margin: 8px 10px;
 }
@@ -152,7 +148,9 @@ color: white;
 }
 
 #network.disconnected {
-background: #40B36A;
+background: transparent;
+padding: 0px 2px;
+margin: 2px 7px;
 }
 
 #pulseaudio {
