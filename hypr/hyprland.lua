@@ -1,9 +1,12 @@
 
+Source = https://github.com/OBlovespie/MonoCachy
+
+
 ------------------
 ---- MONITORS ----
 ------------------
 
--- See https://wiki.hypr.land/Configuring/Basics/Monitors/
+
 hl.monitor({
     output   = "DP-1",
     mode     = "2560x1440@240.00Hz",
@@ -18,13 +21,12 @@ hl.monitor({
 ---- MY PROGRAMS ----
 ---------------------
 
--- Set programs that you use
 local terminal    = "kitty"
 local fileManager = "dolphin"
 local menu        = "hyprlauncher"
 local browser     = "helium-browser"
 local launcher    = "hyprlauncher"
-local text editor = "kate"
+local text editor = "nvim"
 local auth agent  = "hyprpolkitagent"
 local notification daemon = "swaync"
 
@@ -42,11 +44,6 @@ local notification daemon = "swaync"
 ---- AUTOSTART ----
 -------------------
 
--- See https://wiki.hypr.land/Configuring/Basics/Autostart/
-
--- Autostart necessary processes (like notifications daemons, status bars, etc.)
--- Or execute your favorite apps at launch like this:
---
 hl.on("hyprland.start", function ()
 hl.exec_cmd("nm-applet")
 hl.exec_cmd("waybar & hyprpaper")
@@ -63,8 +60,6 @@ end)
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
 
--- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
-
 hl.env("XCURSOR_SIZE", "22")
 hl.env("HYPRCURSOR_SIZE", "22")
 
@@ -73,26 +68,10 @@ hl.env("HYPRCURSOR_SIZE", "22")
 ----- PERMISSIONS -----
 -----------------------
 
--- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Permissions/
--- Please note permission changes here require a Hyprland restart and are not applied on-the-fly
--- for security reasons
-
--- hl.config({
---   ecosystem = {
---     enforce_permissions = true,
---   },
--- })
-
--- hl.permission("/usr/(bin|local/bin)/grim", "screencopy", "allow")
--- hl.permission("/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", "screencopy", "allow")
--- hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")
-
-
 -----------------------
 ---- LOOK AND FEEL ----
 -----------------------
 
--- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
     general = {
         gaps_in  = 5,
@@ -143,68 +122,47 @@ hl.config({
     },
 })
 
--- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
 hl.curve("easeOutQuint",   { type = "bezier", points = { {0.23, 1},    {0.32, 1}    } })
 hl.curve("easeInOutCubic", { type = "bezier", points = { {0.65, 0.05}, {0.36, 1}    } })
 hl.curve("linear",         { type = "bezier", points = { {0, 0},       {1, 1}       } })
 hl.curve("almostLinear",   { type = "bezier", points = { {0.5, 0.5},   {0.75, 1}    } })
 hl.curve("quick",          { type = "bezier", points = { {0.15, 0},    {0.1, 1}     } })
 
--- Default springs
-hl.curve("easy",           { type = "spring", mass = 1, stiffness = 60.2633, dampening = 20.8273644 })
+
+hl.curve("easy",           { type = "spring", mass = 1, stiffness = 180.2633, dampening = 20.8273644 })
 
 hl.animation({ leaf = "global",        enabled = true,  speed = 10,   bezier = "default" })
 hl.animation({ leaf = "border",        enabled = true,  speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows",       enabled = true,  speed = 4.79, spring = "easy" })
-hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 4.1,  spring = "easy",         style = "popin 87%" })
+hl.animation({ leaf = "windows",       enabled = true,  speed = 1, spring = "easy" })
+hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 1,  spring = "easy",         style = "popin 87%" })
 hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 1.49, bezier = "linear",       style = "popin 87%" })
 hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 1.73, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 1.46, bezier = "almostLinear" })
-hl.animation({ leaf = "fade",          enabled = true,  speed = 3.03, bezier = "quick" })
-hl.animation({ leaf = "layers",        enabled = true,  speed = 3.81, bezier = "easeOutQuint" })
-hl.animation({ leaf = "layersIn",      enabled = true,  speed = 4,    bezier = "easeOutQuint", style = "fade & smoothIn & smoothOut" })
-hl.animation({ leaf = "layersOut",     enabled = true,  speed = 1.5,  bezier = "linear",       style = "fade & smoothIn & smoothOut" })
+hl.animation({ leaf = "fade",          enabled = true,  speed = 2.6, bezier = "quick" })
+hl.animation({ leaf = "layers",        enabled = true,  speed = 1, bezier = "easeOutQuint" })
+hl.animation({ leaf = "layersIn",      enabled = true,  speed = 1,    bezier = "easeOutQuint" })
+hl.animation({ leaf = "layersOut",     enabled = true,  speed = 1.5,  bezier = "linear" })
 hl.animation({ leaf = "fadeLayersIn",  enabled = true,  speed = 1.79, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeLayersOut", enabled = true,  speed = 1.39, bezier = "almostLinear" })
 hl.animation({ leaf = "workspaces",    enabled = true,  speed = 2.7, bezier = "almostLinear", style = "slide & smoothIn & smoothOut" })
 hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 2.7, bezier = "almostLinear", style = "slide & smoothIn & smoothOut" })
-hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 2.7, bezier = "almostLinear", style = "slide & smoothIn & smoothOut" })
-hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "quick" })
+hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 1.7, bezier = "almostLinear", style = "slide & smoothIn & smoothOut" })
+hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 3,    bezier = "quick" })
 
-
--- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
--- "Smart gaps" / "No gaps when only"
--- uncomment all if you wish to use that.
--- hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
--- hl.workspace_rule({ workspace = "f[1]",   gaps_out = 0, gaps_in = 0 })
--- hl.window_rule({
---     name  = "no-gaps-wtv1",
---     match = { float = false, workspace = "w[tv1]" },
---     border_size = 0,
---     rounding    = 0,
--- })
--- hl.window_rule({
---     name  = "no-gaps-f1",
---     match = { float = false, workspace = "f[1]" },
---     border_size = 0,
---     rounding    = 0,
--- })
-
--- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
     dwindle = {
-        preserve_split = true, -- You probably want this
+        preserve_split = true,
     },
 })
 
--- See https://wiki.hypr.land/Configuring/Layouts/Master-Layout/ for more
+
 hl.config({
     master = {
         new_status = "master",
     },
 })
 
--- See https://wiki.hypr.land/Configuring/Layouts/Scrolling-Layout/ for more
+
 hl.config({
     scrolling = {
         fullscreen_on_one_column = true,
@@ -217,8 +175,8 @@ hl.config({
 
 hl.config({
     misc = {
-        force_default_wallpaper = 1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
-            disable_hyprland_logo   = true, -- If true disables the random hyprland logo / anime girl background. :)
+        force_default_wallpaper = 1,
+            disable_hyprland_logo   = true,
 disable_splash_rendering = true,
 middle_click_paste       = false
 
@@ -242,7 +200,7 @@ hl.config({
 
         follow_mouse = 1,
 
-        sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
+        sensitivity = 0,
 
         touchpad = {
             natural_scroll = false,
@@ -256,8 +214,7 @@ hl.gesture({
     action = "workspace"
 })
 
--- Example per-device config
--- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
+
 hl.device({
     name        = "epic-mouse-v1",
     sensitivity = -0.5,
@@ -268,12 +225,11 @@ hl.device({
 ---- KEYBINDINGS ----
 ---------------------
 
-local mainMod = "SUPER" -- Sets "Windows" key as main modifier
+local mainMod = "SUPER"
 
--- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
+
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
--- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + A", hl.dsp.window.float({ action = "toggle" }))
@@ -295,6 +251,8 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
+-- Move to a different workspace with keys 0-9
+-- Move a window to a different workspace with keys and shift
 hl.bind(mainMod .. " +  1", hl.dsp.exec_cmd("hyprctl movetoworkspacesilent <I>"))
 hl.bind(mainMod .. " +  2", hl.dsp.exec_cmd("hyprctl movetoworkspacesilent <Ⅱ>"))
 hl.bind(mainMod .. " +  3", hl.dsp.exec_cmd("hyprctl movetoworkspacesilent <Ⅲ>"))
@@ -306,9 +264,49 @@ hl.bind(mainMod .. " +  8", hl.dsp.exec_cmd("hyprctl movetoworkspacesilent <Ⅷ>
 hl.bind(mainMod .. " +  9", hl.dsp.exec_cmd("hyprctl movetoworkspacesilent <Ⅸ>"))
 
 
+-- Move windows around with keyboard
+hl.bind(mainMod .. " + SHIFT + left",  hl.dsp.window.move({ direction = "l" }))
+hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "r" }))
+hl.bind(mainMod .. " + SHIFT + up",    hl.dsp.window.move({ direction = "u" }))
+hl.bind(mainMod .. " + SHIFT + down",  hl.dsp.window.move({ direction = "d" }))
 
--- Switch workspaces with mainMod + [0-9]
--- Move active window to a workspace with mainMod + SHIFT + [0-9]
+
+-- helper: float + exact resize + exact move, based on monitor fractions
+local function snap(wFrac, hFrac, xFrac, yFrac)
+  return function()
+    local mon = hl.get_active_monitor()
+    local w = math.floor(mon.width * wFrac / mon.scale)
+    local h = math.floor(mon.height * hFrac / mon.scale)
+    local x = mon.position.x + math.floor(mon.width * xFrac / mon.scale)
+    local y = mon.position.y + math.floor(mon.height * yFrac / mon.scale)
+
+    hl.dispatch(hl.dsp.window.float({ action = "set" }))
+    hl.dispatch(hl.dsp.window.resize({ exact = true, x = w, y = h }))
+    hl.dispatch(hl.dsp.window.move({ exact = true, x = x, y = y }))
+  end
+end
+
+-- halves
+hl.bind(mainMod .. " + ALT + h", snap(0.5, 1.0, 0.0, 0.0))   -- left half
+hl.bind(mainMod .. " + ALT + l", snap(0.5, 1.0, 0.5, 0.0))   -- right half
+hl.bind(mainMod .. " + ALT + k", snap(1.0, 0.5, 0.0, 0.0))   -- top half
+hl.bind(mainMod .. " + ALT + j", snap(1.0, 0.5, 0.0, 0.5))   -- bottom half
+
+-- quarters
+hl.bind(mainMod .. " + ALT + u", snap(0.5, 0.5, 0.0, 0.0))   -- top-left
+hl.bind(mainMod .. " + ALT + i", snap(0.5, 0.5, 0.5, 0.0))   -- top-right
+hl.bind(mainMod .. " + ALT + n", snap(0.5, 0.5, 0.0, 0.5))   -- bottom-left
+hl.bind(mainMod .. " + ALT + m", snap(0.5, 0.5, 0.5, 0.5))   -- bottom-right
+
+-- full float, centered
+hl.bind(mainMod .. " + ALT + f", function()
+  hl.dispatch(hl.dsp.window.float({ action = "set" }))
+  local mon = hl.get_active_monitor()
+  hl.dispatch(hl.dsp.window.resize({ exact = true, x = math.floor(mon.width * 0.9), y = math.floor(mon.height * 0.9) }))
+  hl.dispatch(hl.dsp.window.center())
+end)
+
+
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
     hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
@@ -346,11 +344,6 @@ for i = 1, 10 do
     ---- WINDOWS AND WORKSPACES ----
     --------------------------------
 
-    -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
-    -- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
-
-    -- Example window rules that are useful
-
     local suppressMaximizeRule = hl.window_rule({
         -- Ignore maximize requests from all apps. You'll probably like this.
         name  = "suppress-maximize-events",
@@ -358,10 +351,9 @@ for i = 1, 10 do
 
         suppress_event = "maximize",
     })
-    -- suppressMaximizeRule:set_enabled(false)
+
 
     hl.window_rule({
-        -- Fix some dragging issues with XWayland
         name  = "fix-xwayland-drags",
         match = {
             class      = "^$",
@@ -375,15 +367,6 @@ for i = 1, 10 do
         no_focus = true,
     })
 
-    -- Layer rules also return a handle.
-    -- local overlayLayerRule = hl.layer_rule({
-    --     name  = "no-anim-overlay",
---     match = { namespace = "^my-overlay$" },
---     no_anim = true,
--- })
--- overlayLayerRule:set_enabled(false)
-
--- Hyprland-run windowrule
 hl.window_rule({
     name  = "move-hyprland-run",
     match = { class = "hyprland-run" },
