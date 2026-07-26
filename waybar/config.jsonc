@@ -1,8 +1,9 @@
 {
    "exclusive": "true",
-   "layer": "float", // Waybar at top layer
-    "position": "top", // Waybar at the bottom of your screen
+   "layer": "float", 
+    "position": "top", 
     "spacing": 5,
+
     "margin": 5,
     "width": 2540,
     "height": 50,
@@ -60,7 +61,7 @@
 
     },
     "network": {
-        // "interface": "wlp2s0", // (Optional) To force the use of this interface
+	"interfaces": ["wlp2s0", "enp6s0"],   
         "format-wifi": "  ",
         "format-ethernet": "󰈀",
         "format-disconnected": "!!!"
@@ -87,7 +88,6 @@
              "custom/power":{
              "format": "  ⏻  ",
             "tooltip": false,
-            "on-click-right": "hyprlauncher",
             "on-click": "wlogout --buttons-per-row 2"
 
 },
@@ -103,3 +103,5 @@
 
     }
 }
+
+
