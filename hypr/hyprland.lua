@@ -25,7 +25,7 @@ local terminal    = "kitty"
 local fileManager = "dolphin"
 local menu        = "hyprlauncher"
 local browser     = "helium-browser"
-local launcher    = "hyprlauncher"
+local launcher    = "rofi"
 local text editor = "nvim"
 local auth agent  = "hyprpolkitagent"
 local notification daemon = "swaync"
@@ -46,9 +46,11 @@ local notification daemon = "swaync"
 
 hl.on("hyprland.start", function ()
 hl.exec_cmd("nm-applet")
-hl.exec_cmd("waybar & hyprpaper")
+hl.exec_cmd("waybar")
+hl.exec_cmd("systemctl --user start hyprpolkitagent.service")
 hl.exec_cmd("systemctl --user start hyprpolkitagent")
 hl.exec_cmd("swaync")
+hl.exec_cmd("awww-daemon")
 hl.exec_cmd("openrgb")
 end)
 
@@ -233,14 +235,14 @@ local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + A", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(launcher))
+hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("rofi -show drun"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("helium-browser"))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("pkill waybar && hyprctl dispatch exec waybar"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("waybar"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region"))
-hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("swaync"))
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("~/.config/rofi/scripts/wallpaper.sh"))
 
 
 
