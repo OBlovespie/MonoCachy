@@ -3,6 +3,7 @@
 <img width="577" height="155" alt="ascii-tex2t" src="https://github.com/user-attachments/assets/146c39c3-2ce2-4c03-b8d5-813ed0d26cd3" />
 
 MonoCachy is a Cachyos/hyprland rice that uses a monochrome/greyscale colour scheme.
+So far MonoCachy features an applauncher, wallpaper switcher, notification manager and a logout screen as its main features.
                                                      
   
 
