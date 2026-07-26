@@ -1,0 +1,140 @@
+/* =============================================================================
+ * wallpaper.rasi — Universal Neutral Glass Theme
+ * ============================================================================= */
+
+@import "colors.rasi"
+
+* {
+    font: "MesloLGLDZ Nerd Font Propo 12";
+
+    background-color: transparent;
+
+    text-color: @fg-main;
+}
+
+/* ── Window ────────────────────────────────── */
+
+window {
+    width: 50%;
+    height: 25%;
+
+    location: center;
+    anchor: center;
+
+    border: 0;
+    border-radius: 0px;
+
+    padding: 18px;
+
+    background-color: @bg-main;
+}
+
+/* ── Main Layout ───────────────────────────── */
+
+mainbox {
+    spacing: 16px;
+
+    children: [ inputbar, listview ];
+}
+
+/* ── Search Bar ────────────────────────────── */
+
+inputbar {
+    padding: 12px 18px;
+
+    spacing: 12px;
+
+    border-radius: 0px;
+
+    background-color: @bg-panel;
+
+    children: [ prompt, entry ];
+}
+
+prompt {
+    enabled: true;
+
+    content: "";
+
+    font: "JetBrainsMono Nerd Font 12";
+
+    text-color: @fg-dim;
+
+    border-color: #FFFFFF;
+
+    margin: 0px 4px 0px 0px;
+}
+
+entry {
+    placeholder: "Search wallpaper...";
+
+    placeholder-color: @fg-dim;
+
+    text-color: @fg-main;
+
+    background-color: transparent;
+}
+
+/* ── Wallpaper Grid ────────────────────────── */
+
+listview {
+    columns: 5;
+    lines: 10;
+
+    flow: horizontal;
+
+    fixed-height: true;
+    fixed-columns: true;
+
+    cycle: false;
+
+    scrollbar: false;
+
+    spacing: 16px;
+}
+
+/* ── Wallpaper Cards ───────────────────────── */
+
+element {
+    orientation: vertical;
+
+    padding: 10px;
+
+    spacing: 10px;
+
+    border-radius: 0px;
+}
+
+/* ── Selected Wallpaper ────────────────────── */
+
+element selected.normal {
+    background-color: @bg-selected;
+
+    border-radius: 0px;
+}
+
+/* ── Preview Image ─────────────────────────── */
+
+element-icon {
+    size: 170px;
+
+    border-radius: 0px;
+
+    horizontal-align: 0.5;
+
+    vertical-align: 0.5;
+}
+
+/* ── Wallpaper Name ────────────────────────── */
+
+element-text {
+    horizontal-align: 0.5;
+
+    text-color: #ffffff;
+
+
+
+
+
+
+}
