@@ -1,15 +1,15 @@
 configuration {
-  display-drun: "Applications:";
+  display-drun: " Search...";
   display-window: "Windows:";
   drun-display-format: "{name}";
-  ont: "MesloLGLDZ Nerd Font Propo 10";
+  ont: "MesloLGLDZ Nerd Font Propo 12";
   modi: "window,run,drun";
 }
 
 @theme "/dev/null"
 
 * {
-  bg: #00000066;
+  bg: #00000068;
   bg-alt: #292928dd;
   bg-selected: #787875d6;
 
@@ -25,7 +25,7 @@ configuration {
 
 window {
   width: 30%;
-  background-color: @bg;
+  background-color: transparent;
   border: 2;
   border-color: @fg;
 }
@@ -34,11 +34,12 @@ element {
   padding: 8 12;
   background-color: transparent;
   text-color: @fg-alt;
+  margin: 8 8 8 8;
 }
 
 element selected {
   text-color: @fg;
-  background-color: @bg-selected;
+  background-color: #15171888;
 }
 
 element-text {
@@ -47,25 +48,20 @@ element-text {
   vertical-align: 0.5;
 }
 
-element-icon {
-  size: 14;
-  padding: 0 10 0 0;
-  background-color: transparent;
-}
-
 entry {
   padding: 12;
-  background-color: @bg-alt;
+  background-color: transparent;
   text-color: @fg;
 }
 
 inputbar {
   children: [prompt, entry];
-  background-color: @bg;
+  background-color: #00000099;
+  margin: 8 8 8 8;
 }
 
 listview {
-  background-color: @bg;
+  background-color: #00000099;
   columns: 1;
   lines: 10;
 }
@@ -73,13 +69,13 @@ listview {
 mainbox {
   children: [inputbar, listview];
   background-color: @bg;
+
 }
 
 prompt {
   enabled: true;
   padding: 12 0 0 12;
-  background-color: @bg-alt;
+  background-color: transparent;
   text-color: @fg;
 }
-
 
