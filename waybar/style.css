@@ -47,9 +47,11 @@ window#waybar {
 }
 
 #workspaces {
-margin: 5px 5px;
 transition: 0.2s ease;
-padding: 4px 4px;
+padding: 0px 5px;
+margin: 5px;
+padding-left: 5px;
+padding-right: 5px;
 }
 
 
@@ -66,32 +68,17 @@ border-radius: 0;
 
 #workspaces button.active {
 color: rgba(255,255,255,1);
-transition: all 0.3s ease;
-border-bottom: 1px solid alpha(@foreground, 1);
+transition: all 0s ease; /*temporary until bug fixed*/
+box-shadow: inset 0 -1px #ffffff;
 padding: 4px 4px;
 margin: 5px;
-animation: ws_hover 20s ease-in-out 1;
-opacity: 0.9;
-}
-
-
-#workspaces button.empty {
-opacity: 0.15;
-color: @foreground;
-transition: all 0.3s ease;
-padding: 1px 4px;
-}
-
-#workspaces button.empty.active {
+animation: ws_hover 2s ease-in-out 1;
 opacity: 1;
-color: @foreground;
-transition: all 0.3s ease;
-padding: 1px 4px;
 }
 
 
 
-#clock, #cpu, #memory, #network, #pulseaudio, #temperature, #workspaces, #custompower, #customseparator, #customswaync {
+#clock, #cpu, #memory, #network, #pulseaudio, #temperature, #custompower, #customseparator, #customswaync {
 padding: 0px 5px;
 margin: 5px 10px;
 padding-left: 5px;
@@ -107,13 +94,13 @@ color: white
 
 #custompower {
 padding: 0px 10px;
-margin: 8px 10px;
+margin: 5px 10px;
 }
 
 
-customswaync {
+#customswaync {
 padding: 0px 10px;
-margin: 8px 10px;
+margin: 5px 10px;
 }
 
 
@@ -162,5 +149,4 @@ color: white;
 background: transparent;
 color: white;
 }
-
 
