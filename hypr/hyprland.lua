@@ -21,32 +21,25 @@ hl.monitor({
 ---- MY PROGRAMS ----
 ---------------------
 
+
 local terminal    = "kitty"
 local fileManager = "dolphin"
-local menu        = "hyprlauncher"
 local browser     = "helium-browser"
 local launcher    = "rofi"
 local text editor = "nvim"
 local auth agent  = "hyprpolkitagent"
 local notification daemon = "swaync"
-
-
-
-
-
-
-
-
-
+local color picker = "hyprpicker"
 
 
 -------------------
 ---- AUTOSTART ----
 -------------------
 
+
 hl.on("hyprland.start", function ()
 hl.exec_cmd("nm-applet")
-hl.exec_cmd("waybar")
+hl.exec_cmd("sleep 2.5 && waybar")
 hl.exec_cmd("systemctl --user start hyprpolkitagent.service")
 hl.exec_cmd("systemctl --user start hyprpolkitagent")
 hl.exec_cmd("swaync")
@@ -55,24 +48,19 @@ hl.exec_cmd("openrgb")
 end)
 
 
-
-
-
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
+
 
 hl.env("XCURSOR_SIZE", "22")
 hl.env("HYPRCURSOR_SIZE", "22")
 
 
 -----------------------
------ PERMISSIONS -----
------------------------
-
------------------------
 ---- LOOK AND FEEL ----
 -----------------------
+
 
 hl.config({
     general = {
@@ -87,10 +75,10 @@ hl.config({
           inactive_border = "rgba(00000000)",
         },
 
-        -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
+        
         resize_on_border = false,
 
-        -- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
+        
         allow_tearing = false,
 
         layout = "dwindle",
@@ -100,7 +88,7 @@ hl.config({
         rounding       = 0,
         rounding_power = 2,
 
-        -- Change transparency of focused and unfocused windows
+        
         active_opacity   = 1.0,
         inactive_opacity = 1.0,
 
@@ -171,9 +159,11 @@ hl.config({
     },
 })
 
+
 ----------------
 ----  MISC  ----
 ----------------
+
 
 hl.config({
     misc = {
@@ -192,6 +182,7 @@ middle_click_paste       = false
 ---- INPUT ----
 ---------------
 
+
 hl.config({
     input = {
         kb_layout  = "us",
@@ -208,7 +199,9 @@ hl.config({
             natural_scroll = false,
         },
     },
+
 })
+
 
 hl.gesture({
     fingers = 3,
@@ -227,6 +220,7 @@ hl.device({
 ---- KEYBINDINGS ----
 ---------------------
 
+
 local mainMod = "SUPER"
 
 
@@ -242,6 +236,7 @@ hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("helium-browser"))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("pkill waybar && hyprctl dispatch exec waybar"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("waybar"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region"))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("hyprpicker -a"))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("~/.config/rofi/scripts/wallpaper.sh"))
 
 
@@ -255,15 +250,15 @@ hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
 -- Move to a different workspace with keys 0-9
 -- Move a window to a different workspace with keys and shift
-hl.bind(mainMod .. " +  1", hl.dsp.exec_cmd("hyprctl movetoworkspacesilent <I>"))
-hl.bind(mainMod .. " +  2", hl.dsp.exec_cmd("hyprctl movetoworkspacesilent <Ⅱ>"))
-hl.bind(mainMod .. " +  3", hl.dsp.exec_cmd("hyprctl movetoworkspacesilent <Ⅲ>"))
-hl.bind(mainMod .. " +  4", hl.dsp.exec_cmd("hyprctl movetoworkspacesilent <Ⅳ>"))
-hl.bind(mainMod .. " +  5", hl.dsp.exec_cmd("hyprctl movetoworkspacesilent <Ⅴ>"))
-hl.bind(mainMod .. " +  6", hl.dsp.exec_cmd("hyprctl movetoworkspacesilent <Ⅵ>"))
-hl.bind(mainMod .. " +  7", hl.dsp.exec_cmd("hyprctl movetoworkspacesilent <Ⅶ>"))
-hl.bind(mainMod .. " +  8", hl.dsp.exec_cmd("hyprctl movetoworkspacesilent <Ⅷ>"))
-hl.bind(mainMod .. " +  9", hl.dsp.exec_cmd("hyprctl movetoworkspacesilent <Ⅸ>"))
+hl.bind(mainMod .. " +  1", hl.dsp.exec_cmd("hyprctl movetoworkspace <I>"))
+hl.bind(mainMod .. " +  2", hl.dsp.exec_cmd("hyprctl movetoworkspace <Ⅱ>"))
+hl.bind(mainMod .. " +  3", hl.dsp.exec_cmd("hyprctl movetoworkspace <Ⅲ>"))
+hl.bind(mainMod .. " +  4", hl.dsp.exec_cmd("hyprctl movetoworkspace <Ⅳ>"))
+hl.bind(mainMod .. " +  5", hl.dsp.exec_cmd("hyprctl movetoworkspace <Ⅴ>"))
+hl.bind(mainMod .. " +  6", hl.dsp.exec_cmd("hyprctl movetoworkspace <Ⅵ>"))
+hl.bind(mainMod .. " +  7", hl.dsp.exec_cmd("hyprctl movetoworkspace <Ⅶ>"))
+hl.bind(mainMod .. " +  8", hl.dsp.exec_cmd("hyprctl movetoworkspace <Ⅷ>"))
+hl.bind(mainMod .. " +  9", hl.dsp.exec_cmd("hyprctl movetoworkspace <Ⅸ>"))
 
 
 -- Move windows around with keyboard
@@ -342,9 +337,10 @@ for i = 1, 10 do
     hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
 
-    --------------------------------
-    ---- WINDOWS AND WORKSPACES ----
-    --------------------------------
+ --------------------------------
+ ---- WINDOWS AND WORKSPACES ----
+ --------------------------------
+
 
     local suppressMaximizeRule = hl.window_rule({
         -- Ignore maximize requests from all apps. You'll probably like this.
@@ -378,3 +374,14 @@ hl.window_rule({
 
 
 })
+
+
+-----------------
+-------end-------
+-----------------
+
+
+
+
+
+
