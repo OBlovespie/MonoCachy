@@ -9,9 +9,19 @@ vim.cmd [[
 
 vim.cmd("colorscheme quiet")
 
-vim.api.nvim_set_hl(0, "Visual", { bg = "gray", fg = "black" })
+local hl = vim.api.nvim_set_hl
+
+hl(0, 'DiagnosticError', { fg = '#e1e1e6', bg = none, bold = true, underline = true })
+hl(0, 'Error',           { fg = '#e1e1e6', bg = none, bold = true, underline = true})
+
+
+vim.api.nvim_set_hl(0, "Visual", { bg = "none", fg = "#868e91" })
 vim.api.nvim_set_hl(0, "Search", { bg = "#fbbf24", fg = "#000000" })
 vim.api.nvim_set_hl(0, "MatchParen", { fg = "white", bg = "gray", bold = true })
+
+
+
+
 
 local P = {
     white  = "#FFFFFF",
@@ -130,10 +140,6 @@ if opts.bold then spec.bold = true end
                         set_hl("DiagnosticHint", P.dgrey)
                         end,
                     })
-
-
-
-
 
 
 
