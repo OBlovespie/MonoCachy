@@ -8,11 +8,45 @@
    "timeout": 5,
   "timeout-low": 4,
   "timeout-critical": 0,
+  "control-center-margin-top": 10,
+  "control-center-margin-bottom": 10,
+  "control-center-margin-right": 10,
+  "control-center-width": 500,
+  "control-center-height": 1035,
 
   "scripts": {
     "notification-sound": {
         "exec": "/home/fm1/.config/swaync/play_sound.sh",
         "run-on": "receive"
+
+  }
+  },
+  "widgets": ["mpris", "volume", "dnd", "title"],
+  "widget-config": {
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "󰆴 Clear All"
+
+       },
+    "mpris": {
+      "blacklist": ["playerctl"],
+      "autohide": false,
+      "show-album-art": "always",
+      "loop-carousel": false
+      
+
+      },
+    "volume": {
+      "label": "󰕾"
+
+
+
+
+
+
+
+
     }
   }
 }
