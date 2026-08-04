@@ -1,3 +1,30 @@
+* {
+  font-family: "MesloLGLDZ Nerd Font Propo";
+  font-weight: bold;
+  font-size: 1rem;
+}
+ 
+
+
+
+
+list,
+listview,
+row,
+listview row,
+listview row:selected,
+listview row:hover,
+listview row:focus,
+listview row:active {
+background-color: transparent;
+background-image: none;
+box-shadow: none;
+outline: none;
+}
+
+
+
+
 .notification {
     border-radius: 0px;
 }
@@ -61,6 +88,7 @@
 
 .notification-image {
     margin-right: 20px;
+    border-radius: 0px;
 }
 
 
@@ -76,3 +104,11 @@
     padding: 0;
     margin: 0;
 }
+
+
+
+
+
+
+
+
