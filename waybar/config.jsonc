@@ -6,15 +6,15 @@
 
     "margin": 5,
     "width": 2540,
-    "height": 50,
+    "height": 49,
     "mod": "dock",
     "margin-top": 10,
-    "margin-left": 20,
-    "margin-right": 20,
+    "margin-left": 10,
+    "margin-right": 10,
     "reload_style_on_change": true,
-    "modules-left": [ "clock#time", "custom/separator", "pulseaudio", "custom/separator", "network", "custom/separator", "custom/power"],
+    "modules-left": [ "clock#time", "custom/separator", "pulseaudio", "custom/separator", "network", "custom/separator", "custom/power","custom/separator"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": [ "custom/swaync", "custom/separator", "cpu", "custom/separator", "temperature", "custom/separator", "memory", "custom/separator", "clock#date"],
+    "modules-right": [ "custom/separator", "custom/swaync", "custom/separator", "cpu", "custom/separator", "temperature", "custom/separator", "memory", "custom/separator", "clock#date"],
 
     "hyprland/workspaces": {
          "disable-scroll": false,
@@ -45,14 +45,19 @@
         "max-length": 20
     },
     "cpu": {
-        "format": "{}% "
+        "format": "{}% ",
+	"tooltip": false
+    
+
     },
     "memory": {
-        "format": "{}% 󰍜"
+        "format": "{}% 󰍜",
+	"tooltip": false
 
     },
     "temperature": {
-             "format": "{}°C"
+             "format": "{}°C",
+	     "tooltip": false
 
    },
    "custom/separator": {
@@ -76,8 +81,8 @@
     }, "clock#date": {
 
               "format": "{:%d/%m/%Y %a }",
-              "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-               // "format-alt": "{:%Y-%m-%d}"
+              "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+              "tooltip": false 
     },
               "clock#time": {
               "interval": 1,
