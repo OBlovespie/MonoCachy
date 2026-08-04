@@ -11,7 +11,8 @@ Below are examples of the config, as of now there is still parts that are incons
 
 
 
-<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/00e9eb18-0079-460e-a82c-8dfadf64bf1e" />
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/a04a4f7c-5a06-46d1-b6d3-ac178fd0d37a" />
+
 
 
 
