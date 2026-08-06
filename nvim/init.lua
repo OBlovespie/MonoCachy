@@ -15,13 +15,14 @@ hl(0, 'DiagnosticError', { fg = '#e1e1e6', bg = none, bold = true, underline = t
 hl(0, 'Error',           { fg = '#e1e1e6', bg = none, bold = true, underline = true})
 
 
-vim.api.nvim_set_hl(0, "Visual", { bg = "none", fg = "#868e91" })
-vim.api.nvim_set_hl(0, "Search", { bg = "#fbbf24", fg = "#000000" })
+vim.api.nvim_set_hl(0, "Visual", { bg = "#868e91", fg = "#ffffff" })
 vim.api.nvim_set_hl(0, "MatchParen", { fg = "white", bg = "gray", bold = true })
 
-
-
-
+vim.o.hlsearch = true
+vim.o.hlsearch = true
+vim.api.nvim_set_hl(0, "Search",     { fg = "#000000", bg = "#ffffff", bold = true })
+vim.api.nvim_set_hl(0, "IncSearch", { fg = "#000000", bg = "#ffffff", bold = true })
+vim.api.nvim_set_hl(0, "CurSearch", { fg = "#000000", bg = "#808080", bold = true })
 
 local P = {
     white  = "#FFFFFF",
@@ -84,7 +85,7 @@ if opts.bold then spec.bold = true end
                     set_hl("DiagnosticHint", P.dgrey)
 
 
-                    set_hl("Search", "#000000", { bold = true })
+                    
 
 
                     vim.api.nvim_create_autocmd("ColorScheme", {
@@ -102,7 +103,7 @@ if opts.bold then spec.bold = true end
 
 
                         vim.api.nvim_set_hl(0, "Visual", { bg = "none", fg = "white" })
-                        vim.api.nvim_set_hl(0, "Search", { bg = "#fbbf24", fg = "#000000" })
+                        
 
 
                         set_hl("Normal", P.white)
