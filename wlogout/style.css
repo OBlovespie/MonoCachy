@@ -1,7 +1,7 @@
 window {
     font-family: MesloLGLDZ Nerd Font Propo;
     font-size: 16pt;
-    color: #cdd6f4; /* text */
+    color: #cdd6f4; 
     background-color: rgba(0, 00, 00, 0.6);
     border: 15px;
     border-color: rgba(255,255,255,1);
@@ -30,7 +30,7 @@ button:hover {
     background-color: rgba(00, 00, 00, 0);
     color: #ffffff; 
     background-position: center;
-    border-radius: 0px;
+    border-radius: 0px; /*rmovvw ts*/
 
 }
 
