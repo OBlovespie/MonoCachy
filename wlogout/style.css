@@ -1,17 +1,24 @@
 window {
     font-family: MesloLGLDZ Nerd Font Propo;
     font-size: 16pt;
-    color: #cdd6f4; 
+    color: #cdd6f4; /* text */
     background-color: rgba(0, 00, 00, 0.6);
     border: 15px;
     border-color: rgba(255,255,255,1);
+}
+
+
+
+* {
+    box-shadow: none;
+    text-shadow: none;
 }
 
 button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20%;
-    background-color: rgba(00, 00, 00, 0.88);
+    background-color: rgba(00, 00, 00, 0.78);
     border-radius: 0px;
     margin: 10px;
     color: #FFFFFF;
@@ -27,16 +34,17 @@ button {
 
 
 button:hover {
-    background-color: rgba(00, 00, 00, 0);
+    background-color: rgba(00, 00, 00, 0.78); 
     color: #ffffff; 
     background-position: center;
-    border-radius: 0px; /*rmovvw ts*/
+    border-radius: 0px;
+    animation: none;
 
 }
 
 button:focus {
 	outline-style: solid;
-	background-size: 30%;
+	background-size: 25%;
 	border-radius: 0px;
 	border: 2px solid #ffffff;
         border-color: rgba(255,255,255,1);
@@ -67,6 +75,8 @@ button:disabled {
 #reboot {
     background-image: image(url("/home/fm1/.config/wlogout/icons/restart-hover.png"));
 }
+
+
 
 
 
