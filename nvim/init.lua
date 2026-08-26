@@ -52,7 +52,7 @@ if opts.bold then spec.bold = true end
                     set_hl("EndOfBuffer", P.white)
 
 
-                    set_hl("Comment", P.lgrey, { italic = true })
+                    set_hl("Comment", P.egrey, { italic = true })
                     set_hl("String", P.egrey)
                     set_hl("Character", P.egrey)
                     set_hl("Number", P.lgrey)
