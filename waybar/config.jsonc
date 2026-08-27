@@ -14,7 +14,7 @@
     "reload_style_on_change": true,
     "modules-left": [ "clock#time", "custom/separator", "pulseaudio", "custom/separator", "network", "custom/separator", "custom/power","custom/separator"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": [ "custom/separator", "custom/swaync", "custom/separator", "cpu", "custom/separator", "temperature", "custom/separator", "memory", "custom/separator", "clock#date"],
+    "modules-right": [ "custom/separator", "custom/swaync", "custom/separator", "cpu", "custom/separator", "memory", "custom/separator", "clock#date"],
 
     "hyprland/workspaces": {
          "disable-scroll": false,
@@ -45,13 +45,13 @@
         "max-length": 20
     },
     "cpu": {
-        "format": "{}% ",
+        "format": " {usage}%",
 	"tooltip": false
     
 
     },
     "memory": {
-        "format": "{}% 󰍜",
+        "format": "󰍜 {}%",
 	"tooltip": false
 
     },
@@ -66,16 +66,19 @@
 
     },
     "network": {
-	"interfaces": ["wlp2s0", "enp6s0"],   
-        "format-wifi": "  ",
+	
+	"format-linked": "󰈀", 
+        "format": "󰈀",    
         "format-ethernet": "󰈀",
-        "format-disconnected": "!!!"
+	"format-wifi": "  ",
+        "format-disconnected": "!!!",
+	"tooltip": false
     },
     "pulseaudio": {
         "format": "{volume} {icon}",
         "format-muted": "",
         "format-icons": ["", ""],
-        "on-click": ""
+        "tooltip": false
 
 
     }, "clock#date": {
