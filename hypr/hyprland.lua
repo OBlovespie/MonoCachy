@@ -178,6 +178,13 @@ middle_click_paste       = false
 })
 
 
+
+
+
+
+
+
+
 ---------------
 ---- INPUT ----
 ---------------
@@ -195,19 +202,12 @@ hl.config({
 
         sensitivity = 0,
 
-        touchpad = {
-            natural_scroll = false,
-        },
-    },
+     },
 
 })
 
 
-hl.gesture({
-    fingers = 3,
-    direction = "horizontal",
-    action = "workspace"
-})
+
 
 
 hl.device({
@@ -231,13 +231,15 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + A", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("rofi -show drun"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("helium-browser"))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("pkill waybar && hyprctl dispatch exec waybar"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("waybar"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region"))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("hyprpicker -a"))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("~/.config/rofi/scripts/wallpaper.sh"))
+hl.bind(mainMod .. " + SHIFT + X", hl.dsp.exec_cmd("~/.config/rofi/scripts/video-wallpaper.sh"))
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("hyprlock"))
 
 
 
@@ -377,8 +379,11 @@ hl.window_rule({
 
 
 -----------------
--------end-------
+-------END-------
 -----------------
+
+
+
 
 
 
