@@ -44,7 +44,7 @@ hl.exec_cmd("systemctl --user start hyprpolkitagent.service")
 hl.exec_cmd("systemctl --user start hyprpolkitagent")
 hl.exec_cmd("swaync")
 hl.exec_cmd("awww-daemon")
-hl.exec_cmd("openrgb")
+hl.exec_cmd("openrgb --profile mouse")
 end)
 
 
