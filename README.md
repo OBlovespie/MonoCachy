@@ -21,7 +21,12 @@ MonoCachy is a hyprland rice that uses a monochrome/greyscale colour scheme.
 
 
 
-The purpose of these repo is really just to get all my stuff back next time I break my system but feel free to use it, not the most advanced rice or anything but its nice.
+The purpose of these repo is really just to get all my stuff back next time I break my system but feel free to use it, not the most advanced rice or anything but its nice. 
+
+all of my wallpapers that go with this rice have their own repo here it is:
+
+[Link Text](https://github.com/OBlovespie/wallpapers)
+
 
 
 
