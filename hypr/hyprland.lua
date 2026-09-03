@@ -240,7 +240,7 @@ hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("hyprpicker -a"))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("~/.config/rofi/scripts/wallpaper.sh"))
 hl.bind(mainMod .. " + SHIFT + X", hl.dsp.exec_cmd("~/.config/rofi/scripts/video-wallpaper.sh"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("hyprlock"))
-
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 
 
 
