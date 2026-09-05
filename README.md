@@ -13,6 +13,9 @@ MonoCachy is a hyprland rice that uses a monochrome/greyscale colour scheme.
 
 
 Wallpaper Switcher :
+
+
+
 <img width="1318" height="387" alt="image" src="https://github.com/user-attachments/assets/4e1c9b43-e67c-493e-9023-008173d7fe81" />
 
 
@@ -20,7 +23,14 @@ Wallpaper Switcher :
 
 
 Notification Manager :
+
+
+
 <img width="512" height="1374" alt="image" src="https://github.com/user-attachments/assets/ae164de1-8e9c-4da4-a438-20205dc94404" />
+
+
+
+
 
 
 
