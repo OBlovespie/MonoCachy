@@ -38,33 +38,43 @@ Keybinds :
 
 
 Apps :
-SUPER + Q = Terminal
-SUPER + E = File Manager
-SUPER + Z = Browser
-SUPER + R = Rofi Apps
-SUPER + X = Wallpaper Switcher
-SUPER + SHIFT + X = Video Wallpaper Switcher
-SUPER + D = Hyprlock
-SUPER + S = Hyprpicker
-SUPER + M = Wlogout
-SUPER + W = Kill Bar
-SUPER + SHIFT + W = Bar
-SUPER + SHIFT + S = Hyprshot
+
+
+|  Mod  |       key       |                 Action                 |      
+| ----- | :-------------- | :------------------------------------- |
+| SUPER | +  Q            |  = Terminal                            |
+| SUPER | +  E            |  = File Manager                        |                                                           
+| SUPER | +  Z            |  = Browser                             |                                                              
+| SUPER | +  R            |  = Rofi Apps                           |                                                             
+| SUPER | +  X            |  = Wallpaper Switcher                  |                                                                          
+| SUPER | +  SHIFT  + X   |  = Video Wallpaper Switcher            |
+| SUPER | +  D            |  = Hyprlock                            |
+| SUPER | +  S            |  = Hyprpicker                          |
+| SUPER | +  M            |  = Wlogout                             |
+| SUPER | +  W            |  = Kill Bar                            |
+| SUPER | +  SHIFT  + W   |  = Bar                                 |
+| SUPER | +  SHIFT  + S   |  = Hyprshot                            |
 
 
 Window Actions :
-SUPER + C = Close Window
-SUPER + A = Toggle Floating
-SUPER + P = Pseudo Window
-SUPER + J = Toggle Split
-SUPER + F = Toggle Fullscreen
+
+|  Mod  | key |         Action         | 
+| ----- | :-- | :--------------------  |
+| SUPER | + C |  = Close Window        |
+| SUPER | + A |  = Toggle Floating     |
+| SUPER | + P |  = Pseudo Window       |
+| SUPER | + J |  = Toggle Split        |
+| SUPER | + F |  = Toggle Fullscreen   |
 
 
 Window Movement :
-SUPER +     = Move Window Focus
-SUPER + SHIFT +     = Move Window
-SUPER + 1-0/Scroll Wheel = Move Workspace
-SUPER + SHIFT + 1-0 = Move Window To Workspace
+
+|  Mod  | key                  |         Action                 |
+| ----- | :------------------- | :----------------------------- |
+| SUPER | +                |  = Move Window Focus           |
+| SUPER | + SHIFT +        |  = Move Window                 |  
+| SUPER | + 1-0/Scroll Wheel   |  = Move Workspace              |
+| SUPER | + SHIFT + 1-0        |  = Move Window To Workspace    |
 
 
 
@@ -73,8 +83,6 @@ The purpose of these repo is just to get all my dotfiles back next time I break 
 all of my wallpapers that go with this rice have their own repo here it is:
 
 [Link Text](https://github.com/OBlovespie/wallpapers)
-
-
 
 
 
