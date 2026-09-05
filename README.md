@@ -12,16 +12,53 @@ MonoCachy is a hyprland rice that uses a monochrome/greyscale colour scheme.
 
 
 
+Wallpaper Switcher :
+<img width="1318" height="387" alt="image" src="https://github.com/user-attachments/assets/4e1c9b43-e67c-493e-9023-008173d7fe81" />
 
 
 
 
 
+Notification Manager :
+<img width="512" height="1374" alt="image" src="https://github.com/user-attachments/assets/ae164de1-8e9c-4da4-a438-20205dc94404" />
 
 
 
+Keybinds :
 
-The purpose of these repo is really just to get all my stuff back next time I break my system but feel free to use it, not the most advanced rice or anything but its nice. 
+
+Apps :
+SUPER + Q = Terminal
+SUPER + E = File Manager
+SUPER + Z = Browser
+SUPER + R = Rofi Apps
+SUPER + X = Wallpaper Switcher
+SUPER + SHIFT + X = Video Wallpaper Switcher
+SUPER + D = Hyprlock
+SUPER + S = Hyprpicker
+SUPER + M = Wlogout
+SUPER + W = Kill Bar
+SUPER + SHIFT + W = Bar
+SUPER + SHIFT + S = Hyprshot
+
+
+Window Actions :
+SUPER + C = Close Window
+SUPER + A = Toggle Floating
+SUPER + P = Pseudo Window
+SUPER + J = Toggle Split
+SUPER + F = Toggle Fullscreen
+
+
+Window Movement :
+SUPER +     = Move Window Focus
+SUPER + SHIFT +     = Move Window
+SUPER + 1-0/Scroll Wheel = Move Workspace
+SUPER + SHIFT + 1-0 = Move Window To Workspace
+
+
+
+The purpose of these repo is just to get all my dotfiles back next time I break my system but feel free to use it anyways, not the most advanced rice or anything but its nice. 
 
 all of my wallpapers that go with this rice have their own repo here it is:
 
