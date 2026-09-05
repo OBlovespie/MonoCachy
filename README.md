@@ -75,6 +75,11 @@ Notification Manager :
 
 
 
+Rofi App Launcher :
+
+
+
+<img width="792" height="626" alt="image" src="https://github.com/user-attachments/assets/97d2b556-2b91-4cc2-936d-6e080ffbca0f" />
 
 
 
