@@ -26,6 +26,7 @@ local terminal    = "kitty"
 local fileManager = "dolphin"
 local browser     = "helium-browser"
 local launcher    = "rofi"
+local bar         = "waybar"
 local text editor = "nvim"
 local auth agent  = "hyprpolkitagent"
 local notification daemon = "swaync"
@@ -232,9 +233,9 @@ hl.bind(mainMod .. " + A", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("rofi -show drun"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    
-hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("helium-browser"))
+hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("pkill waybar && hyprctl dispatch exec waybar"))
-hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("waybar"))
+hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(bar))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region"))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("hyprpicker -a"))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("~/.config/rofi/scripts/wallpaper.sh"))
@@ -244,13 +245,14 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 
 
 
+
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
--- Move to a different workspace with keys 0-9
+-- Move to a different workspace with keys 1-0
 -- Move a window to a different workspace with keys and shift
 hl.bind(mainMod .. " +  1", hl.dsp.exec_cmd("hyprctl movetoworkspace <I>"))
 hl.bind(mainMod .. " +  2", hl.dsp.exec_cmd("hyprctl movetoworkspace <Ⅱ>"))
@@ -381,6 +383,8 @@ hl.window_rule({
 -----------------
 -------END-------
 -----------------
+
+
 
 
 
