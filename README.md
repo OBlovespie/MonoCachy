@@ -83,6 +83,13 @@ Rofi App Launcher :
 
 
 
+Spicetify :
+
+<img width="2552" height="1375" alt="image" src="https://github.com/user-attachments/assets/1b11affa-4ef8-471d-8a1b-5b533b0e7e7c" />
+
+
+
+
 
 
 The purpose of these repo is just to get all my dotfiles back next time I break my system but feel free to use it anyways, not the most advanced rice or anything but its nice. 
