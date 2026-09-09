@@ -1,7 +1,6 @@
 
 --Source = https://github.com/OBlovespie/MonoCachy
 
-
 ------------------
 ---- MONITORS ----
 ------------------
@@ -347,7 +346,6 @@ for i = 1, 10 do
 
 
     local suppressMaximizeRule = hl.window_rule({
-        -- Ignore maximize requests from all apps. You'll probably like this.
         name  = "suppress-maximize-events",
         match = { class = ".*" },
 
@@ -380,14 +378,20 @@ hl.window_rule({
 })
 
 
+
+hl.window_rule({
+    name = "spotify-transparency",
+    match = {
+        class = "^Spotify$",
+    },
+
+    opacity = 0.80,
+})
+
+
 -----------------
 -------END-------
 -----------------
-
-
-
-
-
 
 
 
