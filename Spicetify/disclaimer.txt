@@ -1,0 +1,1 @@
+if you want the transparency of the spicetify to work that u are using your compositor to make the window transparent also (if u are using hyprland it is the last windowrule at the end of my hyprland.lua
