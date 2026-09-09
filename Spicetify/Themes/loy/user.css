@@ -375,7 +375,7 @@ form
     transition: color var(--border-transition);
 }
 .Root__globalNav::before {
-    content: "Nav";
+    content: "";
     top: 0;
     left: 0;
 }
@@ -393,17 +393,17 @@ form
     .main-yourLibraryX-entryPoints:has(
         .main-yourLibraryX-libraryContainer
     )::before {
-        content: "Library";
+        content: "";
     }
     .Root__main-view::before {
-        content: "Main";
+        content: "";
         position: fixed;
     }
     .main-nowPlayingBar-container::before {
-        content: "Playing";
+        content: "";
     }
     .Root__right-sidebar:has(aside:not(:empty))::before {
-        content: "Sidebar";
+        content: "";
     }
     .Root__globalNav:hover::before,
 .Root__nav-bar .main-yourLibraryX-entryPoints:hover::before,
@@ -797,7 +797,7 @@ button:is(
     transform: translateY(-50%) !important;
 }
 .main-nowPlayingBar-container .playback-bar [data-testid="progress-bar"] {
-    --progress-bar-height: 16px !important;
+    --progress-bar-height: 6px !important;
     --progress-bar-radius: calc(var(--border-radius) / 2) !important;
 }
 .main-nowPlayingBar-container .playback-bar .progress-bar__slider,
@@ -1006,7 +1006,7 @@ button[data-testid="control-button-npv-episodes"] svg {
 
 /* Make Spotify's base colour transparent */
 :root {
-    --spice-main: rgba(0, 0, 0, 0.15) !important;
+    --spice-main: rgba(0, 0, 0, 0) !important;
 }
 
 /* Main Spotify areas */
@@ -1027,7 +1027,7 @@ html,
 .main-nowPlayingBar-container,
 .Root__right-sidebar {
     background: transparent !important;
-    background-color: transparent !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
 }
 
 /* Remove Spotify's large background layers */
@@ -1058,6 +1058,6 @@ html,
 .Root__nav-bar,
 .Root__main-view,
 .main-nowPlayingBar-container {
-    background: rgba(0, 0, 0, 0.15) !important;
+    background: rgba(0, 0, 0, 0.8) !important;
 }
 }
