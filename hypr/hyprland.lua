@@ -55,7 +55,7 @@ end)
 
 hl.env("XCURSOR_SIZE", "22")
 hl.env("HYPRCURSOR_SIZE", "22")
-
+hl.env("QT_STYLE_OVERRIDE", "kvantum")
 
 -----------------------
 ---- LOOK AND FEEL ----
@@ -405,6 +405,7 @@ hl.window_rule({
 -----------------
 -------END-------
 -----------------
+
 
 
 
