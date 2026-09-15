@@ -295,16 +295,8 @@ hl.bind(mainMod .. " + ALT + j", snap(1.0, 0.5, 0.0, 0.5))   -- bottom half
 -- quarters
 hl.bind(mainMod .. " + ALT + u", snap(0.5, 0.5, 0.0, 0.0))   -- top-left
 hl.bind(mainMod .. " + ALT + i", snap(0.5, 0.5, 0.5, 0.0))   -- top-right
-hl.bind(mainMod .. " + ALT + n", snap(0.5, 0.5, 0.0, 0.5))   -- bottom-left
-hl.bind(mainMod .. " + ALT + m", snap(0.5, 0.5, 0.5, 0.5))   -- bottom-right
-
--- full float, centered
-hl.bind(mainMod .. " + ALT + f", function()
-  hl.dispatch(hl.dsp.window.float({ action = "set" }))
-  local mon = hl.get_active_monitor()
-  hl.dispatch(hl.dsp.window.resize({ exact = true, x = math.floor(mon.width * 0.9), y = math.floor(mon.height * 0.9) }))
-  hl.dispatch(hl.dsp.window.center())
-end)
+hl.bind(mainMod .. " + ALT + o", snap(0.5, 0.5, 0.0, 0.5))   -- bottom-left
+hl.bind(mainMod .. " + ALT + p", snap(0.5, 0.5, 0.5, 0.5))   -- bottom-right
 
 
 for i = 1, 10 do
@@ -380,7 +372,18 @@ hl.window_rule({
 
 
 hl.window_rule({
-    name = "spotify-transparency",
+    name = "dolphin-opacity",
+    match = {
+        initial_class = "org.kde.dolphin",
+    },
+
+    opacity = 0.80,
+})
+
+
+
+hl.window_rule({
+    name = "spotify-opacity",
     match = {
         class = "^Spotify$",
     },
@@ -389,9 +392,20 @@ hl.window_rule({
 })
 
 
+hl.window_rule({
+    name = "vivaldi-opacity",
+    match = {
+        initial_class = "^vivaldi-stable$",
+    },
+
+    opacity = "0.80 0.80 1.0",
+})
+
+
 -----------------
 -------END-------
 -----------------
+
 
 
 
