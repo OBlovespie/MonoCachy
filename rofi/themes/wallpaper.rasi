@@ -16,12 +16,13 @@
 
 window {
     width: 50%;
-    height: 25%;
+    height: 45%;
 
     location: center;
     anchor: center;
 
-    border: 0;
+    border: 2;
+    border-color: #ffffff;
     border-radius: 0px;
 
     padding: 18px;
@@ -81,6 +82,7 @@ listview {
     columns: 5;
     lines: 10;
 
+
     flow: horizontal;
 
     fixed-height: true;
@@ -138,3 +140,4 @@ element-text {
 
 
 }
+
