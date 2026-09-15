@@ -18,39 +18,39 @@ Apps :
 
 |  Mod  |       key       |                 Action                 |      
 | ----- | :-------------- | :------------------------------------- |
-| SUPER | +  Q            |  = Terminal                            |
-| SUPER | +  E            |  = File Manager                        |                                                           
-| SUPER | +  Z            |  = Browser                             |                                                              
-| SUPER | +  R            |  = Rofi Apps                           |                                                             
-| SUPER | +  X            |  = Wallpaper Switcher                  |                                                                          
-| SUPER | +  SHIFT  + X   |  = Video Wallpaper Switcher            |
-| SUPER | +  D            |  = Hyprlock                            |
-| SUPER | +  S            |  = Hyprpicker                          |
-| SUPER | +  M            |  = Wlogout                             |
-| SUPER | +  W            |  = Kill Bar                            |
-| SUPER | +  SHIFT  + W   |  = Bar                                 |
-| SUPER | +  SHIFT  + S   |  = Hyprshot                            |
+| SUPER | +  Q            |   Terminal                            |
+| SUPER | +  E            |   File Manager                        |                                                           
+| SUPER | +  Z            |   Browser                             |                                                              
+| SUPER | +  R            |   Rofi Apps                           |                                                             
+| SUPER | +  X            |   Wallpaper Switcher                  |                                                                          
+| SUPER | +  SHIFT  + X   |   Video Wallpaper Switcher            |
+| SUPER | +  D            |   Hyprlock                            |
+| SUPER | +  S            |   Hyprpicker                          |
+| SUPER | +  M            |   Wlogout                             |
+| SUPER | +  W            |   Kill Bar                            |
+| SUPER | +  SHIFT  + W   |   Bar                                 |
+| SUPER | +  SHIFT  + S   |   Hyprshot                            |
 
 
 Window Actions :
 
 |  Mod  | key |         Action         | 
 | ----- | :-- | :--------------------  |
-| SUPER | + C |  = Close Window        |
-| SUPER | + A |  = Toggle Floating     |
-| SUPER | + P |  = Pseudo Window       |
-| SUPER | + J |  = Toggle Split        |
-| SUPER | + F |  = Toggle Fullscreen   |
+| SUPER | + C |   Close Window        |
+| SUPER | + A |   Toggle Floating     |
+| SUPER | + P |   Pseudo Window       |
+| SUPER | + J |   Toggle Split        |
+| SUPER | + F |   Toggle Fullscreen   |
 
 
 Window Movement :
 
 |  Mod  | key                  |         Action                 |
 | ----- | :------------------- | :----------------------------- |
-| SUPER | +                |  = Move Window Focus           |
-| SUPER | + SHIFT +        |  = Move Window                 |  
-| SUPER | + 1-0/Scroll Wheel   |  = Move Workspace              |
-| SUPER | + SHIFT + 1-0        |  = Move Window To Workspace    |
+| SUPER | +                |   Move Window Focus           |
+| SUPER | + SHIFT +        |   Move Window                 |  
+| SUPER | + 1-0/Scroll Wheel   |   Move Workspace              |
+| SUPER | + SHIFT + 1-0        |   Move Window To Workspace    |
 
 
 
