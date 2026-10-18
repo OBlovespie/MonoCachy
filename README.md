@@ -9,6 +9,17 @@ MonoCachy is a hyprland rice that uses a monochrome/greyscale colour scheme.
 
 
 
+<img width="2558" height="1439" alt="image" src="https://github.com/user-attachments/assets/2740053d-5ff3-40e0-a58f-62b3a6cd6f41" />
+
+
+
+
+
+
+
+
+
+
                                                      
 Keybinds :
 
