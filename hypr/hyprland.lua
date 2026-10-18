@@ -23,7 +23,7 @@ hl.monitor({
 
 local terminal    = "kitty"
 local fileManager = "dolphin"
-local browser     = "helium-browser"
+local browser     = "vivaldi"
 local launcher    = "rofi"
 local bar         = "waybar"
 local text editor = "nvim"
@@ -55,7 +55,8 @@ end)
 
 hl.env("XCURSOR_SIZE", "22")
 hl.env("HYPRCURSOR_SIZE", "22")
-hl.env("QT_STYLE_OVERRIDE", "kvantum")
+
+
 
 -----------------------
 ---- LOOK AND FEEL ----
@@ -235,12 +236,15 @@ hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("pkill waybar && hyprctl dispatch exec waybar"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(bar))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region"))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd('hyprshot -m region -o "$HOME/Pictures/Screenshots"'))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("hyprpicker -a"))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("~/.config/rofi/scripts/wallpaper.sh"))
 hl.bind(mainMod .. " + SHIFT + X", hl.dsp.exec_cmd("~/.config/rofi/scripts/video-wallpaper.sh"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
+hl.bind(mainMod .. " + GRAVE", hl.dsp.exec_cmd("wl-bright set 1.00"))
+hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd("wl-bright set 0.70"))
 
 
 
@@ -398,16 +402,13 @@ hl.window_rule({
         initial_class = "^vivaldi-stable$",
     },
 
-    opacity = "0.80 0.80 1.0",
+    opacity = "0.90 0.90 1.0",
 })
 
 
 -----------------
 -------END-------
 -----------------
-
-
-
 
 
 
