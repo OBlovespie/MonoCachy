@@ -150,3 +150,11 @@ background: transparent;
 color: white;
 }
 
+#custom-music.stopped {
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  background: transparent;
+  border: none;
+}
