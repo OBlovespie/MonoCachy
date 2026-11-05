@@ -1,0 +1,122 @@
+{
+   "exclusive": "true",
+   "layer": "float", 
+    "position": "top", 
+    "spacing": 5,
+
+    "margin": 5,
+    "width": 2540,
+    "height": 49,
+    "mod": "dock",
+    "margin-top": 10,
+    "margin-left": 10,
+    "margin-right": 10,
+    "reload_style_on_change": true,
+    "modules-left": [ "custom/power", "custom/separator", "hyprland/workspaces", "custom/separator", "custom/music" ],
+    "modules-center": [""],
+    "modules-right": [ "custom/separator", "custom/swaync", "custom/separator", "pulseaudio",  "custom/separator", "network", "custom/separator", "cpu", "custom/separator", "memory", "custom/separator", "clock#time", "custom/separator", "clock#date" ],
+
+    "hyprland/workspaces": {
+         "disable-scroll": false,
+         "all-outputs": true,
+         "format": "{icon}",
+         "format-icons": {
+             "1": "I",
+             "2": "II",
+             "3": "III",
+             "4": "IV",
+             "5": "V",
+             "6": "VI",
+             "7": "VII",
+             "8": "VIII",
+             "9": "IX",
+             "10": "X"
+
+
+
+
+         }
+
+
+
+
+    },
+    "hyrpland/window": {
+        "max-length": 20
+    },
+    "cpu": {
+        "format": " {usage}%",
+	"tooltip": false
+    
+
+    },
+    "memory": {
+        "format": "󰍜 {}%",
+	"tooltip": false
+
+    },
+    "temperature": {
+             "format": "{}°C",
+	     "tooltip": false
+
+   },
+   "custom/separator": {
+    "format": "|",
+    "tooltip": false
+
+    },
+    "network": {
+	
+	"format-linked": "󰈀", 
+        "format": "󰈀",    
+        "format-ethernet": "󰈀",
+	"format-wifi": "",
+        "format-disconnected": "!!!",
+	"tooltip": false
+    },
+    "pulseaudio": {
+        "format": "{volume} {icon}",
+        "format-muted": "",
+        "format-icons": ["", ""],
+        "tooltip": false
+
+
+    }, "clock#date": {
+
+              "format": "{:%d/%m/%Y %a }",
+              "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+              "tooltip": false 
+    },
+              "clock#time": {
+              "interval": 1,
+              "format": "{:%H:%M}",
+            "tooltip": false
+},
+
+
+             "custom/power":{
+             "format": "<span font='10' rise='3000'>  /fm1  </span>",
+            "tooltip": false,
+            "on-click": "wlogout --buttons-per-row 2"
+
+},
+
+
+    "custom/swaync": {
+    "tooltip": false,
+    "on-click": "swaync-client -t -sw",
+    "format": "    "
+
+
+},
+
+
+  "custom/music": {
+    "format": "{}",
+    "return-type": "json",
+    "exec": "waybar-module-music --whitelist spotify --play-icon '▶' --pause-icon '⏸'" 
+}
+
+   }
+
+}
