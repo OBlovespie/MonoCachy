@@ -68,6 +68,17 @@ Window Movement :
 Images :
 
 
+
+
+
+Ranger :
+
+<img width="1872" height="1263" alt="current-ranger-config-looks" src="https://github.com/user-attachments/assets/19db4056-8c9a-48f2-bf8c-d07101701b3c" />
+
+
+
+
+
 Wallpaper Switcher :
 
 
