@@ -95,7 +95,7 @@
 
 
              "custom/power":{
-             "format": "<span font='10' rise='3000'>  /fm1  </span>",
+             "format": "<span font='10' rise='3000'>  /user  </span>",
             "tooltip": false,
             "on-click": "wlogout --buttons-per-row 2"
 
