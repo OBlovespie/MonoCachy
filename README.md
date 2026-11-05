@@ -97,6 +97,24 @@ Notification Manager :
 
 
 
+
+
+Waybar Configurations :
+
+ normal :
+ <img width="2560" height="68" alt="2026-11-05-195336_hyprshot" src="https://github.com/user-attachments/assets/6d54ea51-af33-4b2f-ab18-bc3c7234d959" />
+
+
+ minimal :
+ <img width="2560" height="69" alt="2026-11-05-195253_hyprshot" src="https://github.com/user-attachments/assets/c5d876df-5ac6-493b-9412-5081c1ac0ab8" />
+
+
+
+ alternate : 
+ <img width="2560" height="72" alt="2026-11-05-195143_hyprshot" src="https://github.com/user-attachments/assets/1557d2b5-e140-45b7-b64e-6805995c1edb" />
+
+
+
 Rofi App Launcher :
 
 
