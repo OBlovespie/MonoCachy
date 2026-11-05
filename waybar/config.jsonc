@@ -12,7 +12,7 @@
     "margin-left": 10,
     "margin-right": 10,
     "reload_style_on_change": true,
-    "modules-left": [ "clock#time", "custom/separator", "pulseaudio", "custom/separator", "network", "custom/separator", "custom/power","custom/separator"],
+    "modules-left": [ "clock#time", "custom/separator", "pulseaudio", "custom/separator", "network", "custom/separator", "custom/power","custom/separator", "custom/music"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": [ "custom/separator", "custom/swaync", "custom/separator", "cpu", "custom/separator", "memory", "custom/separator", "clock#date"],
 
@@ -70,7 +70,7 @@
 	"format-linked": "󰈀", 
         "format": "󰈀",    
         "format-ethernet": "󰈀",
-	"format-wifi": "  ",
+	"format-wifi": "",
         "format-disconnected": "!!!",
 	"tooltip": false
     },
@@ -107,9 +107,15 @@
     "format": "    "
 
 
+},
+
+
+  "custom/music": {
+    "format": "{}",
+    "return-type": "json",
+    "exec": "waybar-module-music --whitelist spotify --play-icon '▶' --pause-icon '⏸'" 
 }
 
-    }
+   }
+
 }
-
-
