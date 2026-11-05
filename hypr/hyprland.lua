@@ -44,7 +44,7 @@ hl.exec_cmd("systemctl --user start hyprpolkitagent.service")
 hl.exec_cmd("systemctl --user start hyprpolkitagent")
 hl.exec_cmd("swaync")
 hl.exec_cmd("awww-daemon")
-hl.exec_cmd("openrgb --profile mouse")
+hl.exec_cmd("signalrgb")
 end)
 
 
@@ -185,7 +185,6 @@ middle_click_paste       = false
 
 
 
-
 ---------------
 ---- INPUT ----
 ---------------
@@ -290,17 +289,15 @@ local function snap(wFrac, hFrac, xFrac, yFrac)
   end
 end
 
--- halves
-hl.bind(mainMod .. " + ALT + h", snap(0.5, 1.0, 0.0, 0.0))   -- left half
-hl.bind(mainMod .. " + ALT + l", snap(0.5, 1.0, 0.5, 0.0))   -- right half
-hl.bind(mainMod .. " + ALT + k", snap(1.0, 0.5, 0.0, 0.0))   -- top half
-hl.bind(mainMod .. " + ALT + j", snap(1.0, 0.5, 0.0, 0.5))   -- bottom half
 
--- quarters
-hl.bind(mainMod .. " + ALT + u", snap(0.5, 0.5, 0.0, 0.0))   -- top-left
-hl.bind(mainMod .. " + ALT + i", snap(0.5, 0.5, 0.5, 0.0))   -- top-right
-hl.bind(mainMod .. " + ALT + o", snap(0.5, 0.5, 0.0, 0.5))   -- bottom-left
-hl.bind(mainMod .. " + ALT + p", snap(0.5, 0.5, 0.5, 0.5))   -- bottom-right
+
+
+-- Resize the active window
+hl.bind(mainMod .. " + ALT + LEFT",  hl.dsp.window.resize({ x = -20, y = 0, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + ALT + RIGHT", hl.dsp.window.resize({ x = 20,  y = 0, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + ALT + UP",    hl.dsp.window.resize({ x = 0, y = -20, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + ALT + DOWN",  hl.dsp.window.resize({ x = 0, y = 20,  relative = true }), { repeating = true })
+
 
 
 for i = 1, 10 do
