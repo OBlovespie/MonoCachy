@@ -39,7 +39,7 @@ local color picker = "hyprpicker"
 
 hl.on("hyprland.start", function ()
 hl.exec_cmd("nm-applet")
-hl.exec_cmd("sleep 2.5 && waybar")
+hl.exec_cmd("sleep 2.5 && waybar -c /home/fm1/.config/waybar/config-alt.jsonc")
 hl.exec_cmd("systemctl --user start hyprpolkitagent.service")
 hl.exec_cmd("systemctl --user start hyprpolkitagent")
 hl.exec_cmd("swaync")
@@ -244,7 +244,7 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 hl.bind(mainMod .. " + GRAVE", hl.dsp.exec_cmd("wl-bright set 1.00"))
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd("wl-bright set 0.70"))
-
+hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("playerctl play-pause"))
 
 
 
@@ -289,7 +289,17 @@ local function snap(wFrac, hFrac, xFrac, yFrac)
   end
 end
 
+-- halves
+hl.bind(mainMod .. " + ALT + h", snap(0.5, 1.0, 0.0, 0.0))   -- left half
+hl.bind(mainMod .. " + ALT + l", snap(0.5, 1.0, 0.5, 0.0))   -- right half
+hl.bind(mainMod .. " + ALT + k", snap(1.0, 0.5, 0.0, 0.0))   -- top half
+hl.bind(mainMod .. " + ALT + j", snap(1.0, 0.5, 0.0, 0.5))   -- bottom half
 
+-- quarters
+hl.bind(mainMod .. " + ALT + u", snap(0.5, 0.5, 0.0, 0.0))   -- top-left
+hl.bind(mainMod .. " + ALT + i", snap(0.5, 0.5, 0.5, 0.0))   -- top-right
+hl.bind(mainMod .. " + ALT + o", snap(0.5, 0.5, 0.0, 0.5))   -- bottom-left
+hl.bind(mainMod .. " + ALT + p", snap(0.5, 0.5, 0.5, 0.5))   -- bottom-right
 
 
 -- Resize the active window
@@ -406,6 +416,10 @@ hl.window_rule({
 -----------------
 -------END-------
 -----------------
+
+
+
+
 
 
 
