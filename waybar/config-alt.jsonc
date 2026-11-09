@@ -95,7 +95,7 @@
 
 
              "custom/power":{
-             "format": "<span font='10' rise='3000'>  /user  </span>",
+             "format": "<span font='10' rise='3000'>  /fm1  </span>",
             "tooltip": false,
             "on-click": "wlogout --buttons-per-row 2"
 
@@ -114,9 +114,16 @@
   "custom/music": {
     "format": "{}",
     "return-type": "json",
-    "exec": "waybar-module-music --whitelist spotify --play-icon '▶' --pause-icon '⏸'" 
+    "exec": "waybar-module-music --whitelist spotify --play-icon '▶' --pause-icon '⏸'",
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-click-middle": "playerctl previous"
+
+
 }
+
 
    }
 
 }
+
