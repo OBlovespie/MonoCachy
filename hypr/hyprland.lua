@@ -245,6 +245,10 @@ hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 hl.bind(mainMod .. " + GRAVE", hl.dsp.exec_cmd("wl-bright set 1.00"))
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd("wl-bright set 0.70"))
 hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("playerctl play-pause"))
+hl.bind(mainMod .. " + ALT + Q", hl.dsp.exec_cmd("playerctl next"))
+hl.bind(mainMod .. " + TAB + Q", hl.dsp.exec_cmd("playerctl previous"))
+
+
 
 
 
