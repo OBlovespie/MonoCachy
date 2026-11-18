@@ -113,7 +113,7 @@ Waybar Configurations :
  alternate : 
  <img width="2560" height="72" alt="sampleimg-configalt-waybar" src="https://github.com/user-attachments/assets/62d22a1c-aa28-4a56-b4bd-9b0664201d1a" />
 
-
+(if u are wondering why this looks different at the end of the css file i have some diff workspaces colours that might apply,they are after the spotify module. Simply remove them and you will get the normal look)
 
 
 Rofi App Launcher :
