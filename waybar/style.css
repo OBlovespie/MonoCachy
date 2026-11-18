@@ -78,7 +78,7 @@ opacity: 1;
 
 
 
-#clock, #cpu, #memory, #network, #pulseaudio, #temperature, #custompower, #customseparator, #customswaync {
+#clock, #cpu, #memory, #network, #pulseaudio, #temperature, #custompower, #customseparator, #customswaync, #tags {
 padding: 0px 5px;
 margin: 5px 10px;
 padding-left: 5px;
@@ -157,4 +157,58 @@ color: white;
   min-width: 0;
   background: transparent;
   border: none;
+
 }
+
+/* alternate workspaces config, diff colours to og, remove to restore og colours */
+
+
+#workspaces {
+  border-color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+}
+
+#workspaces button {
+  background: transparent;
+  color: #fff;
+}
+
+#workspaces button.hidden {
+  color: rgba(255, 255, 255, 0.5);
+  background: transparent;
+}
+
+#workspaces button.visible {
+  color: #fff;
+}
+
+#workspaces button:hover {
+  color: #000;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+#workspaces button.active {
+  background: #fff;
+  color: #000;
+}
+
+#workspaces button.urgent,
+#workspaces button.overview {
+  background: #000;
+  color: #fff;
+}
+
+#window,
+#layout,
+#language,
+#keymode {
+  background: transparent;
+  color: #fff;
+}
+
+window#waybar.empty #window {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
